@@ -1,38 +1,268 @@
-.App {
-  text-align: center;
+:root {
+  --main-radius: 5px;
+  --main-padding: 5px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  color:#c1d1e8;
+  font-family: "Inter", sans-serif;
+  background: #081221 ;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+
+.container {
+  display: grid;
+  height: 100vh;
+  width:100vw;
+  margin-left: 5rem;
+  margin-right: 5rem;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 0.2fr 1.5fr 1.2fr 0.8fr 0.8fr;
+  grid-template-areas:
+    "nav nav nav nav nav"
+    "sidebar main main main main "
+    "sidebar main main main main"
+    "sidebar main main main main";
+  
+}
+
+.nav {
+  background: #081221 ;
+  grid-area: nav;
+  border-radius: var(--main-radius);
+  padding-top: var(--main-padding);
+}
+
+.main {
+  background: #081221;
+  grid-area: main;
+  border-radius: var(--main-radius);
+  padding-top: var(--main-padding);
+}
+
+.maincard {
+ 
+  color:#c1d1e8;
+  
+ 
+  width: 65rem ;
+   margin-bottom: 4rem; margin-left:4rem; 
+   
+}
+.ivs {
+  display:grid;
+  grid-template-columns: 1fr 1fr ;
+ 
+  grid-template-areas:
+    "iv1 iv2";
+}
+.iv1{
+  grid-area: iv1;
+  color:white;
+  font-size:35px;
+  padding-right: 4rem;
+}
+.iv2{
+  grid-area: iv2;
+  color:white;
+  font-size:35px;
+}
+.headtag{
+  color:white;
+  padding-left:33rem;
+}
+.contactcontent{
+  color:white;
+   padding-left:33rem;
+   padding-right:31rem;
+}
+.nvs {
+  display:grid;
+  grid-template-columns: 1fr 1fr ;
+ 
+  grid-template-areas:
+    "nv1 nv2";
+}
+
+.nv1{
+  grid-area: nv1;
+  color:white;
+  margin-left:4rem;
+  font-size:35px;
+  margin-right:4rem;
+}
+.nv2{
+  grid-area: nv2;
+  color:white;
+  margin-left:4rem;
+  font-size:35px;
+  margin-right:4rem;
+}
+.sidebarcard {
+ 
+  color:#c1d1e8;
+  height:50rem;
+   width: 25rem;
+    padding:2rem; 
+    margin-bottom: 4rem; 
+    margin-left:4rem; 
+}
+.sidebar {
+  background: #081221 ;
+  grid-area: sidebar;
+  border-radius: var(--main-radius);
+  padding-top: var(--main-padding);
+}
+.contactcard{
+  background-color:#0e1a2b;width:50rem; display:flex;justify-content:center; align-items: center;margin:auto; margin-top:5rem;padding:20px;
+}
+@media (min-width: 550px) and (max-width: 1024px) {
+  
+  .container {
+    margin: 0rem;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.4fr 0.4fr 2.2fr 1.2fr 1.2fr 1.2fr 1fr;
+    grid-template-areas:
+      "nav"
+      "sidebar"
+      "main"
+      
+  }
+  
+  
+
+  .maincard {
+   
+    color:#c1d1e8;
+    
+   
+    width: 46rem ;
+     margin-bottom: 4rem; margin-left:4rem; 
+     
+  }
+  .ivs {
+    display:grid;
+    grid-template-columns: 1fr 1fr ;
+   
+    grid-template-areas:
+      "iv1 iv2";
+  }
+  .headtag{
+    color:white;
+    padding-left:15rem;
+  }
+  .contactcontent{
+    color:white;
+     padding-left:15rem;
+     padding-right:15rem;
+  }
+  .nvs {
+    display:grid;
+    grid-template-columns: 1fr 1fr ;
+   
+    grid-template-areas:
+      "nv1 nv2";
+  }
+  
+  .sidebarcard {
+   
+    color:#c1d1e8;
+    height:35rem;
+     width: 26rem;
+     
+      margin-bottom: 4rem; 
+      margin-left:4rem; 
+      display:flex;
+      justify-content:center;
+      align-items: center;
+      margin:auto;
+      margin-top:5rem;
+        
+  }
+  .sidebar {
+    background: #081221 ;
+    grid-area: sidebar;
+    border-radius: var(--main-radius);
+    padding-top: var(--main-padding);
+  
+  }
+  .contactcard{
+    background-color:#0e1a2b;width:30rem; display:flex;justify-content:center; align-items: center;margin:auto; margin-top:5rem;padding:20px;
+  }
+  .orderlabel{
+    margin-left: 5rem;
+  }
+  .btntab{
+    margin-left: 2rem;
   }
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media only screen and (max-width: 550px) {
+  .container {
+    margin: 0rem;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.4fr 0.4fr 2.2fr 1.2fr 1.2fr 1.2fr 1fr;
+    grid-template-areas:
+      "nav"
+      "sidebar"
+      "main"
+      
   }
-  to {
-    transform: rotate(360deg);
+  .nvs{
+    grid-template-columns: 1fr;
+    grid-template-areas:
+    "nv1"
+    "nv2";
+
+  }
+  .ivs{
+    grid-template-columns: 1fr;
+    grid-template-areas:
+    "iv1"
+    "iv2";
+
+  }
+  .maincard {
+    background: #0e1a2b;
+    color:#c1d1e8;
+    
+   
+    width: 23rem ;
+    margin-bottom: 4rem;
+    margin-left:4rem; 
+  }
+  .sidebarcard {
+    
+    color:#0e1a2b;
+    height:30rem;
+     width: 22rem;
+      padding:2rem; 
+      margin-bottom: 4rem; 
+      margin-left:4rem; 
+      background-color:#0e1a2b;
+  }
+  .headtag{
+    color:white;
+    padding-left:7rem;
+  }
+  .contactcontent{
+    color:white;
+     padding-left:3rem;
+     padding-right:3rem;
+  }
+  .contactcard{
+    background-color:#0e1a2b;
+    width:25rem;
+     display:flex;
+     
+     
+     margin:auto; 
+     margin-top:2rem;
+    
+  }
+  .iv1{
+    grid-area: iv1;
+    color:white;
+    font-size:35px;
+   
   }
 }
